@@ -54,4 +54,4 @@ class BoundariesLoader:
         if not quiet:
             logger.log_line(f"✓ Bounding box of {city} is [{xmin}, {ymin}, {xmax}, {ymax}]")
 
-        return [xmin, ymin, xmax, ymax]
+        return xmin, ymin, xmax, ymax

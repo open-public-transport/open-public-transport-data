@@ -10,6 +10,7 @@ library_paths = [
     os.path.join(script_path, "lib"),
     os.path.join(script_path, "lib", "loader"),
     os.path.join(script_path, "lib", "loader", "gtfs"),
+    os.path.join(script_path, "lib", "loader", "overpass"),
     os.path.join(script_path, "lib", "log"),
 ]
 
@@ -22,6 +23,7 @@ from logger_facade import LoggerFacade
 from tracking_decorator import TrackingDecorator
 from gtfs_loader import GtfsLoader
 from boundaries_loader import BoundariesLoader
+from overpass_landuse_loader import OverpassLanduseLoader
 
 
 #
@@ -75,6 +77,9 @@ def main(argv):
     # Set paths
     base_results_path = os.path.join(script_path, "data")
 
+    # Initialize logger
+    logger = LoggerFacade(base_results_path, console=True, file=False)
+
     # Iterate over transport associations
     for transport_association in transport_associations:
         results_path = os.path.join(base_results_path, "transport-associations", transport_association["name"])
@@ -92,6 +97,8 @@ def main(argv):
             quiet=quiet
         )
 
+    land_success_total, land_failure_total = 0, 0
+
     # Iterate over cities
     for city in cities:
         results_path = os.path.join(base_results_path, "cities", city)
@@ -100,7 +107,7 @@ def main(argv):
         logger = LoggerFacade(results_path, console=True, file=False)
 
         # Load bounding box
-        bounding_box = BoundariesLoader().run(
+        xmin, ymin, xmax, ymax = BoundariesLoader().run(
             logger=logger,
             data_path=results_path,
             city=city,
@@ -108,6 +115,23 @@ def main(argv):
             quiet=quiet
         )
 
+        # Load land use
+        success, failure = OverpassLanduseLoader().run(
+            logger=logger,
+            results_path=results_path,
+            city=city,
+            xmin=xmin,
+            ymin=ymin,
+            xmax=xmax,
+            ymax=ymax,
+            clean=clean,
+            quiet=quiet
+        )
+
+        land_success_total += success
+        land_failure_total += failure
+
+    logger.log_line(f"✓ Landuse loader success {land_success_total} / failure {land_failure_total}")
 
 if __name__ == "__main__":
     main(sys.argv[1:])
