@@ -36,20 +36,19 @@ def main(argv):
     clean = False
     quiet = False
 
-    # transport_associations = [
-    #     {"name": "avv",
-    #      "url": "https://www.opendata-oepnv.de/dataset/dede57c7-9601-43cd-9fb6-8ab4c27412d2/resource/5373201d-021a-4cff-92be-bcb9e2365d8b/download/avv_gtfs_masten_mit_spnv_und_arr-lim-1.zip"},
-    #     {"name": "hvv", "url": "https://opendata-oepnv.de/fileadmin/datasets/hvv/05-11-2021_Soll-Fahrplandaten.zip"},
-    #     {"name": "mvv",
-    #      "url": "https://www.opendata-oepnv.de/dataset/17065229-c3fd-46d7-84a9-aae55aadbf40/resource/208c55dd-15d6-4ea0-abd7-8433d64180ed/download/mvv_gtfs.zip"},
-    #     {"name": "nwl",
-    #      "url": "https://www.opendata-oepnv.de/dataset/89892705-b6e7-4ffc-977c-2ba9b86dde46/resource/38f05ab3-d9c7-4a44-bef5-5037fae430d7/download/gtfs-nwl-20211215.zip"},
-    #     {"name": "vbb", "url": "https://www.vbb.de/fileadmin/user_upload/VBB/Dokumente/API-Datensaetze/GTFS.zip"},
-    #     {"name": "vrs",
-    #      "url": "https://www.opendata-oepnv.de/dataset/19460e8a-bb64-4103-a429-4e5eec4578e9/resource/744a2ac6-eb8c-4734-b92c-7a43e84da45c/download/gtfs_vrs_mit_spnv-.zip"},
-    #     {"name": "vvs", "url": "https://opendata-oepnv.de/fileadmin/datasets/vvs/09-11-2021_Soll-Fahrplandaten.zip"}
-    # ]
-    transport_associations = []
+    transport_associations = [
+        {"name": "avv",
+         "url": "https://www.opendata-oepnv.de/dataset/dede57c7-9601-43cd-9fb6-8ab4c27412d2/resource/5373201d-021a-4cff-92be-bcb9e2365d8b/download/avv_gtfs_masten_mit_spnv_und_arr-lim-1.zip"},
+        {"name": "hvv", "url": "https://opendata-oepnv.de/fileadmin/datasets/hvv/05-11-2021_Soll-Fahrplandaten.zip"},
+        {"name": "mvv",
+         "url": "https://www.opendata-oepnv.de/dataset/17065229-c3fd-46d7-84a9-aae55aadbf40/resource/208c55dd-15d6-4ea0-abd7-8433d64180ed/download/mvv_gtfs.zip"},
+        {"name": "nwl",
+         "url": "https://www.opendata-oepnv.de/dataset/89892705-b6e7-4ffc-977c-2ba9b86dde46/resource/38f05ab3-d9c7-4a44-bef5-5037fae430d7/download/gtfs-nwl-20211215.zip"},
+        {"name": "vbb", "url": "https://www.vbb.de/fileadmin/user_upload/VBB/Dokumente/API-Datensaetze/GTFS.zip"},
+        {"name": "vrs",
+         "url": "https://www.opendata-oepnv.de/dataset/19460e8a-bb64-4103-a429-4e5eec4578e9/resource/744a2ac6-eb8c-4734-b92c-7a43e84da45c/download/gtfs_vrs_mit_spnv-.zip"},
+        {"name": "vvs", "url": "https://opendata-oepnv.de/fileadmin/datasets/vvs/09-11-2021_Soll-Fahrplandaten.zip"}
+    ]
 
     cities = [
         "berlin", "bochum", "bonn", "bremen", "cottbus", "dortmund", "duesseldorf", "duisburg", "frankfurt-main",
