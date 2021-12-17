@@ -5,4 +5,11 @@
 
 /venv/
 
-/data/transport-associations
+lib/__pycache__/
+
+lib/loader/__pycache__/
+lib/loader/gtfs/__pycache__/
+lib/loader/overpass/__pycache__/
+lib/log/__pycache__/
+
+/data/transport-associations/**/*.zip
