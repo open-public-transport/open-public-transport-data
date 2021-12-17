@@ -34,7 +34,7 @@ class BoundariesLoader:
             geometry = feature["geometry"]
             coordinates = geometry["coordinates"]
 
-            while not len(coordinates[0]) == 2:
+            while not (type(coordinates[0][0]) == float and type(coordinates[0][1]) == float):
                 coordinates = coordinates[0]
 
             for coordinate in coordinates:
@@ -53,3 +53,5 @@ class BoundariesLoader:
 
         if not quiet:
             logger.log_line(f"✓ Bounding box of {city} is [{xmin}, {ymin}, {xmax}, {ymax}]")
+
+        return [xmin, ymin, xmax, ymax]
