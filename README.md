@@ -18,14 +18,44 @@
 
 tbd
 
+pip install osm2geojson
+
 ### Built With
 
 * tbd
 
 ## Installation
 
-tbd
+Initialize the submodules of this repository by running the following commands.
 
+```shell script
+git submodule init
+git submodule update
+```
+
+Install the following dependencies to fulfill the requirements for this project to run.
+
+```shell script
+python -m pip install --upgrade pip
+pip install flake8 pytest
+pip install geojson
+pip install osm2geojson
+```
+
+## Usage
+
+Run this command to start the main script.
+
+```shell script
+python main.py [OPTION]...
+
+  -h, --help                           show this help
+  -c, --clean                          clean intermediate results before start
+  -q, --quiet                          do not log outputs
+
+Examples:
+  python main.py -c -p
+```
 
 ## Structure
 
