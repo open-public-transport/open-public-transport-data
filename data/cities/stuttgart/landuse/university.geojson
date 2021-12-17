@@ -1,0 +1,56 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "type": "way",
+                "id": 505052760,
+                "tags": {
+                    "landuse": "university",
+                    "name": "Neubau Wohnheim",
+                    "operator": "Studierendenwerk Tübingen-Hohenheim"
+                },
+                "nodes": [
+                    4950891184,
+                    4950891186,
+                    4950891190,
+                    243510286,
+                    1578319487,
+                    4950891184
+                ]
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            9.2093028,
+                            48.7168818
+                        ],
+                        [
+                            9.2094675,
+                            48.7162143
+                        ],
+                        [
+                            9.2104763,
+                            48.7163259
+                        ],
+                        [
+                            9.2102905,
+                            48.7170189
+                        ],
+                        [
+                            9.2100164,
+                            48.7173126
+                        ],
+                        [
+                            9.2093028,
+                            48.7168818
+                        ]
+                    ]
+                ]
+            }
+        }
+    ]
+}
