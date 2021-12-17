@@ -1,0 +1,1 @@
+https://opendata-esri-de.opendata.arcgis.com/datasets/esri-de-content::stadtbezirke-bochum/explore
