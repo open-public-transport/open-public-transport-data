@@ -45,6 +45,7 @@ def main(argv):
         {"name": "nwl",
          "url": "https://www.opendata-oepnv.de/dataset/89892705-b6e7-4ffc-977c-2ba9b86dde46/resource/38f05ab3-d9c7-4a44-bef5-5037fae430d7/download/gtfs-nwl-20211215.zip"},
         {"name": "vbb", "url": "https://www.vbb.de/fileadmin/user_upload/VBB/Dokumente/API-Datensaetze/GTFS.zip"},
+        {"name": "vms", "url": "https://www.vms.de/fileadmin/user_upload/GTFS-Daten/GTFS_VMS_2021-12-19.zip"},
         {"name": "vrr", "url": "https://www.opendata-oepnv.de/dataset/496eea5d-d6ef-4dc2-aeb0-d15c4fbf3178/resource/8658008e-c006-46cf-8109-d08d3881d6ba/download/20211216_gtfs_vrr_od.zip"},
         {"name": "vrs",
          "url": "https://www.opendata-oepnv.de/dataset/19460e8a-bb64-4103-a429-4e5eec4578e9/resource/744a2ac6-eb8c-4734-b92c-7a43e84da45c/download/gtfs_vrs_mit_spnv-.zip"},
@@ -52,8 +53,8 @@ def main(argv):
     ]
 
     cities = [
-        "berlin", "bochum", "bonn", "bremen", "cottbus", "dortmund", "duesseldorf", "duisburg", "frankfurt-main",
-        "frankfurt-oder", "hamburg", "hamm", "koeln", "muenchen", "muenster", "potsdam", "stuttgart", "wuppertal"
+        "berlin", "bochum", "bonn", "bremen", "cottbus", "dortmund", "dresden", "duesseldorf", "duisburg", "frankfurt-main",
+        "frankfurt-oder", "hamburg", "hamm", "koeln", "leipzig", "muenchen", "muenster", "potsdam", "stuttgart", "wuppertal"
     ]
 
     # Read command line arguments
