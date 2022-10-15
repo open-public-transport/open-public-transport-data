@@ -3,7 +3,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/open-public-transport/open-public-transport-data">
-    <img src="img/logo_with_text.png" alt="Logo" height="80">
+    <img src="./logo_with_text.png" alt="Logo" height="80">
   </a>
 
   <h1 align="center">Open Public Transport (Data)</h1>
